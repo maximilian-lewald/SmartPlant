@@ -15,7 +15,7 @@ datetime_now = 0
 print(datetime.datetime.now().hour)
 
 def datetime_now():
-    datetime_now = datetime.datetime.now().hour * 100 + datetime.datetime.now().minute
+    datetime_now = (datetime.datetime.now().hour * 100) + datetime.datetime.now().minute
 
 while 1:
     f = open('lampValues.json')
