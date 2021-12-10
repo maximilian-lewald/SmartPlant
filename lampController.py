@@ -26,14 +26,17 @@ while 1:
         publish.single(MQTT_PATH_RED, '1024', hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_BLUE, '1024', hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_WHITE, '1024', hostname=MQTT_SERVER)
+        print('turning off..')
     elif(datetime.datetime.now().hour >= sunrise and datetime.datetime.now().hour < sunset):
         publish.single(MQTT_PATH_RED, red, hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_BLUE, blue, hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_WHITE, white, hostname=MQTT_SERVER)
+        print('turning on..')
     else:
         publish.single(MQTT_PATH_RED, '1024', hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_BLUE, '1024', hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_WHITE, '1024', hostname=MQTT_SERVER)
+        print('turning off..')
 
     time.sleep(1)
 
