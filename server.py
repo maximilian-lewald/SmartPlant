@@ -11,7 +11,7 @@ def index():
     if request.method == 'POST':
         publish.single(MQTT_PATH, request.form['sunrise'], hostname=MQTT_SERVER)
         lampValues['lamp'] = {'sunrise': request.form['sunrise'], 'sunset': 0,'red': 0, 'blue': 0, 'white': 0}
-        with open('lampValues.json', 'w') as f:
+        with open('/home/pi/SmartPlant/lampValues.json', 'w') as f:
             json.dump(lampValues, f)
     return render_template('index.html')
 
