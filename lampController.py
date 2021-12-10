@@ -38,7 +38,7 @@ while 1:
         publish.single(MQTT_PATH_BLUE, '1024', hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_WHITE, '1024', hostname=MQTT_SERVER)
         print('turning off..')
-    elif(sunrise >= time_now and time_now < sunset):
+    elif(sunrise >= time_now and sunset < time_now):
         publish.single(MQTT_PATH_RED, red, hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_BLUE, blue, hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_WHITE, white, hostname=MQTT_SERVER)
