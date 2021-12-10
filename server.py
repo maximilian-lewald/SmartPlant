@@ -3,6 +3,7 @@ import paho.mqtt.publish as publish, json
 
 MQTT_SERVER = "192.168.178.58"
 MQTT_PATH = "/growtent/led/red"
+lampValues = {}
 
 app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
