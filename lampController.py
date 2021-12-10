@@ -10,8 +10,12 @@ sunset = 21
 white = 1024
 red = 1024
 blue = 1024
+datetime_now = 0
 
 print(datetime.datetime.now().hour)
+
+def datetime_now():
+    datetime_now = datetime.datetime.now().hour * 100 + datetime.datetime.now().minute
 
 while 1:
     f = open('lampValues.json')
@@ -24,12 +28,15 @@ while 1:
     blue = lampValues['lamp']['blue']
     f.close()
 
-    if(datetime.datetime.now().hour < sunrise):
+    datetime_now()
+    print(datetime_now)
+
+    if(datetime_now < sunrise):
         publish.single(MQTT_PATH_RED, '1024', hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_BLUE, '1024', hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_WHITE, '1024', hostname=MQTT_SERVER)
         print('turning off..')
-    elif(datetime.datetime.now().hour >= sunrise and datetime.datetime.now().hour < sunset):
+    elif(datetime_now >= sunrise and datetime_now < sunset):
         publish.single(MQTT_PATH_RED, red, hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_BLUE, blue, hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_WHITE, white, hostname=MQTT_SERVER)
