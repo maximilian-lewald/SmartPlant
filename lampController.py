@@ -33,12 +33,18 @@ while 1:
     print('sunrise:' + sunrise)
     print(sunrise >= time_now)
 
-    if(sunrise < time_now):
-        publish.single(MQTT_PATH_RED, '1024', hostname=MQTT_SERVER)
-        publish.single(MQTT_PATH_BLUE, '1024', hostname=MQTT_SERVER)
-        publish.single(MQTT_PATH_WHITE, '1024', hostname=MQTT_SERVER)
-        print('turning off..')
-    elif(sunrise >= time_now and sunset < time_now):
+    if(sunset < sunrise):
+        if(time_now >= sunrise or time_now <= sunset):
+            publish.single(MQTT_PATH_RED, red, hostname=MQTT_SERVER)
+            publish.single(MQTT_PATH_BLUE, blue, hostname=MQTT_SERVER)
+            publish.single(MQTT_PATH_WHITE, white, hostname=MQTT_SERVER)
+            print('turning on..')
+        else:
+            publish.single(MQTT_PATH_RED, '1024', hostname=MQTT_SERVER)
+            publish.single(MQTT_PATH_BLUE, '1024', hostname=MQTT_SERVER)
+            publish.single(MQTT_PATH_WHITE, '1024', hostname=MQTT_SERVER)
+            print('turning off..')
+    elif(time_now >= sunrise and time_now < sunset):
         publish.single(MQTT_PATH_RED, red, hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_BLUE, blue, hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_WHITE, white, hostname=MQTT_SERVER)
