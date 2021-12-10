@@ -6,13 +6,12 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
-
 def index():
         if request.method == 'POST':
 #                publish.single(MQTT_PATH, "hello", hostname=MQTT_SERVER)
                 print("Hello")
 #       return render_template('index.html')
-        return "Hello"
+        return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
