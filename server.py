@@ -12,7 +12,7 @@ def index():
         publish.single(MQTT_PATH, request.form['sunrise'], hostname=MQTT_SERVER)
         lampValues['lamp'] = {'sunrise': request.form['sunrise'], 'sunset': 0,'red': 0, 'blue': 0, 'white': 0}
         with open('lampValues.json', 'w') as f:
-            json.dump(lampValues, file)
+            json.dump(lampValues, f)
     return render_template('index.html')
 
 if __name__ == '__main__':
