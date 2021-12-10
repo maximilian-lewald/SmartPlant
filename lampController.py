@@ -11,6 +11,8 @@ white = 1024
 red = 1024
 blue = 1024
 
+print(datetime.datetime.now().hour)
+
 while 1:
     f = open('lampValues.json')
     lampValues = json.load(f)
