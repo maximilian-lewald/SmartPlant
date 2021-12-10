@@ -30,6 +30,7 @@ while 1:
 
     time_now = datetime_now()
     print(time_now)
+    print('sunrise:' + sunrise)
 
     if(time_now < sunrise):
         publish.single(MQTT_PATH_RED, '1024', hostname=MQTT_SERVER)
