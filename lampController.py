@@ -10,12 +10,12 @@ sunset = 21
 white = 1024
 red = 1024
 blue = 1024
-datetime_now = 0
+time_now = 0
 
 print(datetime.datetime.now().hour)
 
 def datetime_now():
-    datetime_now = (datetime.datetime.now().hour * 100) + datetime.datetime.now().minute
+    time_now = (datetime.datetime.now().hour * 100) + datetime.datetime.now().minute
 
 while 1:
     f = open('lampValues.json')
@@ -29,7 +29,7 @@ while 1:
     f.close()
 
     datetime_now()
-    print(datetime_now)
+    print(time_now)
 
     if(datetime_now < sunrise):
         publish.single(MQTT_PATH_RED, '1024', hostname=MQTT_SERVER)
