@@ -1,6 +1,7 @@
 body {
     text-align: center;
-    text-size: auto;
+    display:flex;
+    justify-content:center;
 }
 
 #app_title {
