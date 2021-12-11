@@ -31,7 +31,7 @@ while 1:
     time_now = datetime_now()
     print(time_now)
     print('sunrise:' + sunrise)
-    print(time_now >= sunrise)
+    print('time_now >= sunrise:' + (time_now >= sunrise))
     print(time_now < sunset)
 
     if(sunrise > sunset):
