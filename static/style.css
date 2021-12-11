@@ -1,3 +1,7 @@
+body {
+    text-align: center;
+}
+
 #app_title {
     color: green;
     margin-left: auto;
