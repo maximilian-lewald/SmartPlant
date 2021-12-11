@@ -21,16 +21,14 @@ while 1:
     f = open('lampValues.json')
     lampValues = json.load(f)
 
-    sunrise = lampValues['lamp']['sunrise']
-    sunset = lampValues['lamp']['sunset']
-    white = lampValues['lamp']['white']
-    red = lampValues['lamp']['red']
-    blue = lampValues['lamp']['blue']
+    sunrise = int(lampValues['lamp']['sunrise'])
+    sunset = int(lampValues['lamp']['sunset'])
+    white = int(lampValues['lamp']['white'])
+    red = int(lampValues['lamp']['red'])
+    blue = int(lampValues['lamp']['blue'])
     f.close()
 
     time_now = datetime_now()
-    print('time_now: ' + time_now)
-    print('sunrise:' + sunrise)
     print(time_now > sunrise)
     print(time_now < sunset)
 
