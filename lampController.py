@@ -31,9 +31,9 @@ while 1:
     time_now = datetime_now()
     print(time_now)
     print('sunrise:' + sunrise)
-    print(sunrise >= time_now)
+    print(time_now >= sunrise and time_now < sunset)
 
-    if(sunset < sunrise):
+    if(sunrise > sunset):
         if(time_now >= sunrise or time_now <= sunset):
             publish.single(MQTT_PATH_RED, red, hostname=MQTT_SERVER)
             publish.single(MQTT_PATH_BLUE, blue, hostname=MQTT_SERVER)
