@@ -34,6 +34,7 @@ img {
     /*height: 80%;*/
     border-radius: 15px;
     box-shadow: 3px 3px 3px grey;
+    padding: 20px;
 }
 /*
 #grow_image_live {
