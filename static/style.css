@@ -27,3 +27,12 @@ body {
     text-align: center;
     box-shadow: 3px 3px 3px grey;
 }
+
+#grow_image_live {
+  border-radius: 25px;
+  padding: 20px;
+  width: 80%;
+  /*height: 200px;*/
+  height: auto;
+  margin: auto;
+}
