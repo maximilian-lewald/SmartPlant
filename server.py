@@ -13,6 +13,8 @@ def index():
         lampValues['lamp'] = {'sunrise': request.form['sunrise'], 'sunset': request.form['sunset'], 'white': request.form['white'], 'red': request.form['red'], 'blue': request.form['blue']}
         with open('/home/pi/SmartPlant/lampValues.json', 'w') as f:
             json.dump(lampValues, f)
+    f = open('lampValues.json')
+    lampValues = json.load(f)
     return render_template('index.html', element = lampValues['lamp']['sunrise'])
 
 if __name__ == '__main__':
