@@ -4,7 +4,6 @@ import paho.mqtt.publish as publish, json
 MQTT_SERVER = "192.168.178.58"
 MQTT_PATH = "/growtent/led/red"
 lampValues = {}
-element = 'hello'
 
 app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
@@ -14,7 +13,7 @@ def index():
         lampValues['lamp'] = {'sunrise': request.form['sunrise'], 'sunset': request.form['sunset'], 'white': request.form['white'], 'red': request.form['red'], 'blue': request.form['blue']}
         with open('/home/pi/SmartPlant/lampValues.json', 'w') as f:
             json.dump(lampValues, f)
-    return render_template('index.html', element = element)
+    return render_template('index.html', element = lampValues['lamp']['sunrise'])
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
