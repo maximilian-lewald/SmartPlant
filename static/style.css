@@ -5,6 +5,7 @@ body {
     margin-right: auto;
     justify-content:center;
     font-size: 200%
+    -webkit-text-size-adjust: 200%
 }
 
 #app_title {
