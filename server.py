@@ -15,7 +15,7 @@ def index():
             json.dump(lampValues, f)
     f = open('lampValues.json')
     lampValues = json.load(f)
-    return render_template('index.html', element = lampValues['lamp']['sunrise'])
+    return render_template('index.html', element = json.load(open('lampValues.json'))['lamp']['sunrise'])
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
