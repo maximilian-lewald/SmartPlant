@@ -17,12 +17,16 @@ print(datetime.datetime.now().hour)
 def datetime_now():
     return (datetime.datetime.now().hour * 100) + datetime.datetime.now().minute
 
+def parseTimeFromStringToInt(time):
+    return int(time[:-3]) * 100 + int(time[-2:])
+
 while 1:
     f = open('lampValues.json')
     lampValues = json.load(f)
 
-    sunrise = int(lampValues['lamp']['sunrise'])
-    sunset = int(lampValues['lamp']['sunset'])
+    sunrise = parseTimeFromStringToInt(lampValues['lamp']['sunrise'])
+    sunset = parseTimeFromStringToInt(lampValues['lamp']['sunset'])
+    #sunset = int(lampValues['lamp']['sunset'])
     white = int(lampValues['lamp']['white'])
     red = int(lampValues['lamp']['red'])
     blue = int(lampValues['lamp']['blue'])
