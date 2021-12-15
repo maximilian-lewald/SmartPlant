@@ -76,7 +76,7 @@ while 1:
         publish.single(MQTT_PATH_WHITE, '0', hostname=MQTT_SERVER)
 #        print('turning off..')
 
-    time.sleep(0.1)
+    time.sleep(1)
 
 #	print('control....')
 #	while 1:
