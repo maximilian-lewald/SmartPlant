@@ -58,6 +58,8 @@ while 1:
         else:
             led_is_on = False
             blue = 0
+            if(blue != blue_previous):
+                turnLightsOn()
             #publish.single(MQTT_PATH_RED, '0', hostname=MQTT_SERVER)
             #publish.single(MQTT_PATH_BLUE, '0', hostname=MQTT_SERVER)
             #publish.single(MQTT_PATH_WHITE, '0', hostname=MQTT_SERVER)
@@ -73,6 +75,8 @@ while 1:
     else:
         led_is_on = False
         blue = 0
+        if(blue != blue_previous):
+            turnLightsOn()
 
     time.sleep(1)
 
