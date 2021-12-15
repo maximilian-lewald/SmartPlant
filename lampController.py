@@ -68,7 +68,7 @@ while 1:
         #publish.single(MQTT_PATH_RED, red, hostname=MQTT_SERVER)
         #publish.single(MQTT_PATH_BLUE, blue, hostname=MQTT_SERVER)
         #publish.single(MQTT_PATH_WHITE, white, hostname=MQTT_SERVER)
-        if(not led_is_on):
+        if(not led_is_on or blue != blue_previous):
             led_is_on = True
             turnLightsOn()
 #        print('turning on..')
