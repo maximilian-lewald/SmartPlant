@@ -20,6 +20,13 @@ def datetime_now():
 def parseTimeFromStringToInt(time):
     return int(time[:-3]) * 100 + int(time[-2:])
 
+def turnLightsOn():
+    for i in 100:
+        publish.single(MQTT_PATH_RED, (i/100)*red, hostname=MQTT_SERVER)
+        publish.single(MQTT_PATH_BLUE, (i/100)*blue, hostname=MQTT_SERVER)
+        publish.single(MQTT_PATH_WHITE, (i/100)*white, hostname=MQTT_SERVER)
+        time.sleep(0.02)
+
 while 1:
     f = open('lampValues.json')
     lampValues = json.load(f)
@@ -36,9 +43,10 @@ while 1:
 
     if(sunrise > sunset):
         if(time_now >= sunrise or time_now <= sunset):
-            publish.single(MQTT_PATH_RED, red, hostname=MQTT_SERVER)
-            publish.single(MQTT_PATH_BLUE, blue, hostname=MQTT_SERVER)
-            publish.single(MQTT_PATH_WHITE, white, hostname=MQTT_SERVER)
+            #publish.single(MQTT_PATH_RED, red, hostname=MQTT_SERVER)
+            #publish.single(MQTT_PATH_BLUE, blue, hostname=MQTT_SERVER)
+            #publish.single(MQTT_PATH_WHITE, white, hostname=MQTT_SERVER)
+            turnLightsOn()
 #            print('turning on..')
         else:
             publish.single(MQTT_PATH_RED, '0', hostname=MQTT_SERVER)
@@ -46,9 +54,10 @@ while 1:
             publish.single(MQTT_PATH_WHITE, '0', hostname=MQTT_SERVER)
 #            print('turning off..')
     elif(time_now >= sunrise and time_now < sunset):
-        publish.single(MQTT_PATH_RED, red, hostname=MQTT_SERVER)
-        publish.single(MQTT_PATH_BLUE, blue, hostname=MQTT_SERVER)
-        publish.single(MQTT_PATH_WHITE, white, hostname=MQTT_SERVER)
+        #publish.single(MQTT_PATH_RED, red, hostname=MQTT_SERVER)
+        #publish.single(MQTT_PATH_BLUE, blue, hostname=MQTT_SERVER)
+        #publish.single(MQTT_PATH_WHITE, white, hostname=MQTT_SERVER)
+        turnLightsOn()
 #        print('turning on..')
     else:
         publish.single(MQTT_PATH_RED, '0', hostname=MQTT_SERVER)
@@ -56,7 +65,7 @@ while 1:
         publish.single(MQTT_PATH_WHITE, '0', hostname=MQTT_SERVER)
 #        print('turning off..')
 
-    time.sleep(1)
+    time.sleep(0.1)
 
 #	print('control....')
 #	while 1:
