@@ -23,7 +23,7 @@ def parseTimeFromStringToInt(time):
 def turnLightsOn():
     for i in range(100):
         publish.single(MQTT_PATH_RED, int((i/100.0)*red), hostname=MQTT_SERVER)
-        publish.single(MQTT_PATH_BLUE, int((i/100.0)*blue), hostname=MQTT_SERVER)
+        publish.single(MQTT_PATH_BLUE, int((i*i/10000.0)*blue), hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_WHITE, int((i/100.0)*white), hostname=MQTT_SERVER)
         print('.')
         time.sleep(0.02)
