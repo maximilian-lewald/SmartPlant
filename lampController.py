@@ -57,6 +57,7 @@ while 1:
 #            print('turning on..')
         else:
             led_is_on = False
+            blue_previous = 0
             publish.single(MQTT_PATH_RED, '0', hostname=MQTT_SERVER)
             publish.single(MQTT_PATH_BLUE, '0', hostname=MQTT_SERVER)
             publish.single(MQTT_PATH_WHITE, '0', hostname=MQTT_SERVER)
@@ -71,6 +72,7 @@ while 1:
 #        print('turning on..')
     else:
         led_is_on = False
+        blue_previous = 0
         publish.single(MQTT_PATH_RED, '0', hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_BLUE, '0', hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_WHITE, '0', hostname=MQTT_SERVER)
