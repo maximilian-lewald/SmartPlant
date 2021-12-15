@@ -7,9 +7,10 @@ MQTT_PATH_WHITE = "/growtent/led/white"
 
 sunrise = 7
 sunset = 21
-white = 1024
-red = 1024
-blue = 1024
+white = 0
+red = 0
+blue = 0
+blue_previous = 0
 time_now = 0
 led_is_on = False
 
@@ -22,12 +23,12 @@ def parseTimeFromStringToInt(time):
     return int(time[:-3]) * 100 + int(time[-2:])
 
 def turnLightsOn():
-    for i in range(100):
+    for i in range(50):
         publish.single(MQTT_PATH_RED, int((i/100.0)*red), hostname=MQTT_SERVER)
-        publish.single(MQTT_PATH_BLUE, int((i*i/10000.0)*blue), hostname=MQTT_SERVER)
+        publish.single(MQTT_PATH_BLUE, int((i*i/2500.0)*blue) - int(int((2500-(i*i/2500.0))*blue_previous), hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_WHITE, int((i/100.0)*white), hostname=MQTT_SERVER)
-        print('.')
         time.sleep(0.02)
+    blue_previous = blue
 
 while 1:
     f = open('lampValues.json')
@@ -48,7 +49,7 @@ while 1:
             #publish.single(MQTT_PATH_RED, red, hostname=MQTT_SERVER)
             #publish.single(MQTT_PATH_BLUE, blue, hostname=MQTT_SERVER)
             #publish.single(MQTT_PATH_WHITE, white, hostname=MQTT_SERVER)
-            if(not led_is_on):
+            if(not led_is_on or blue != blue_previous):
                 led_is_on = True
                 turnLightsOn()
 #            print('turning on..')
