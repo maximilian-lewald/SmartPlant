@@ -11,6 +11,7 @@ white = 1024
 red = 1024
 blue = 1024
 time_now = 0
+led_is_on = false
 
 print(datetime.datetime.now().hour)
 
@@ -47,9 +48,12 @@ while 1:
             #publish.single(MQTT_PATH_RED, red, hostname=MQTT_SERVER)
             #publish.single(MQTT_PATH_BLUE, blue, hostname=MQTT_SERVER)
             #publish.single(MQTT_PATH_WHITE, white, hostname=MQTT_SERVER)
-            turnLightsOn()
+            if(!led_is_on):
+                led_is_on = true
+                turnLightsOn()
 #            print('turning on..')
         else:
+            led_is_on = false
             publish.single(MQTT_PATH_RED, '0', hostname=MQTT_SERVER)
             publish.single(MQTT_PATH_BLUE, '0', hostname=MQTT_SERVER)
             publish.single(MQTT_PATH_WHITE, '0', hostname=MQTT_SERVER)
@@ -58,9 +62,12 @@ while 1:
         #publish.single(MQTT_PATH_RED, red, hostname=MQTT_SERVER)
         #publish.single(MQTT_PATH_BLUE, blue, hostname=MQTT_SERVER)
         #publish.single(MQTT_PATH_WHITE, white, hostname=MQTT_SERVER)
-        turnLightsOn()
+        if(!led_is_on):
+            led_is_on = true
+            turnLightsOn()
 #        print('turning on..')
     else:
+        led_is_on = false
         publish.single(MQTT_PATH_RED, '0', hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_BLUE, '0', hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_WHITE, '0', hostname=MQTT_SERVER)
