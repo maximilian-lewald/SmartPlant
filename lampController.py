@@ -25,6 +25,7 @@ def turnLightsOn():
         publish.single(MQTT_PATH_RED, (i/100)*red, hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_BLUE, (i/100)*blue, hostname=MQTT_SERVER)
         publish.single(MQTT_PATH_WHITE, (i/100)*white, hostname=MQTT_SERVER)
+        print('.')
         time.sleep(0.02)
 
 while 1:
