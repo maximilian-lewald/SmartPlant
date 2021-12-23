@@ -7,6 +7,6 @@ camera = picamera.PiCamera()
 
 while 1:
 
-    camera.capture('/static/grow_live.png')
+    camera.capture('/static/grow_live.jpg')
 
     time.sleep(5)
