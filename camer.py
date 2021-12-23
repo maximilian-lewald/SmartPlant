@@ -1,4 +1,4 @@
-import picamera
+import picamera, time
 from PIL import Image
 import PIL
 from time import sleep
