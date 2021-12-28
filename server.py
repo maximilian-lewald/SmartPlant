@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response
+from camera import Camera
 import paho.mqtt.publish as publish, json
 
 MQTT_SERVER = "192.168.178.58"
@@ -18,6 +19,17 @@ def index():
     value_white = json.load(open('/home/pi/SmartPlant/lampValues.json'))['lamp']['white'],
     value_red = json.load(open('/home/pi/SmartPlant/lampValues.json'))['lamp']['red'],
     value_blue = json.load(open('/home/pi/SmartPlant/lampValues.json'))['lamp']['blue'])
+
+def gen(camera):
+    while True:
+        frame = camera.get_frame()
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+
+@app.route('/video_feed')
+def video_feed():
+    return Response(gen(Camera()),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
