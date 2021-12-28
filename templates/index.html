@@ -34,8 +34,15 @@
 
   <br>
   <div id="grow_image_live">
-    <script>var currentTime = performance.now();</script>
+    <script>
+    //var currentTime = performance.now();
+    //document.write("<img src="/static/grow_live.png"" + currentTime />);
+    </script>
+
     <img src="/static/grow_live.png?currentTime" alt="Live image">
+    <script>
+    document.write(performance.now()+ "<br>");
+    </script>
   </div>
 </body>
 </html>
