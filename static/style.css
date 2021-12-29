@@ -27,7 +27,7 @@ body {
     height: auto;
     margin: auto;
     text-align: center;
-    box-shadow: 3px 3px 3px grey;
+
 }
 
 img {
@@ -35,7 +35,7 @@ img {
     /*height: auto;*/
     /*height: 80%;*/
     border-radius: 25px;
-    /*box-shadow: 3px 3px 3px grey;*/
+    box-shadow: 3px 3px 3px grey;
 }
 
 #grow_image_live {
