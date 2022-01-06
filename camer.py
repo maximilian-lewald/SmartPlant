@@ -9,4 +9,4 @@ while 1:
 
     camera.capture('/home/pi/SmartPlant/static/grow_live.png')
 
-    time.sleep(5)
+    time.sleep(2)
