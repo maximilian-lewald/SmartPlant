@@ -1,29 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" name="viewport" content="width=device-width; initial-scale=1.0;" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="stylesheet" href='../static/style.css' name="viewport" content="width=[widest centered div];"/>
-  <link rel="apple-touch-icon" sizes="128x128" href="/static/smartplant_icon_2.png"/>
-</head>
+<section id="grow_cards">
 
-<body>
-
-  <header>
-    <div id="header_logo">
-      <svg id="smartplant_logo" viewBox="0 0 153.62 204.95">
-        <path d="M132.09,94.18a22.12,22.12,0,0,0-9.9-3.79,21.43,21.43,0,0,0-2.65-.17c-.51,0-.68,0-1,0l-.84,0-3.33.07-26.63.56-14.52.26V79.87c.48-3.09,1.32-7.59,2.8-14.21,3.83-17.1,22.53-16.62,42.42-18C143.27,46,153.62,4.86,153.62,4.86S76.17-23.55,63.75,57C56.53,41.84,40.6,33.25,22.53,38.64,8.32,42.87,7.72,60.59,5.64,71.71,5.15,74.32,5.31,81.27,0,85.6c0,0,22.53-1,34.73-24.08,3.93-7.41,21.6-6.89,25,13.59.24,1.45.43,2.65.6,3.75v12.5l-25.81.47a21.3,21.3,0,0,0-14.6,6.06,20.85,20.85,0,0,0-6.23,14.6v.41l.08.59,8.87,69.1a22.19,22.19,0,0,0,19.44,21.47c.88.11,1.83.14,2.67.18l1.69,0,3.38,0,27,.43,27,.17,3.38,0h1.69c.86,0,1.84,0,2.75-.16a23.12,23.12,0,0,0,20.54-21.9l4.86-34.44c1.69-11.55,3.11-23.13,4.64-34.69l.1-.73v-.54A22.67,22.67,0,0,0,132.09,94.18Zm-13.17,51.6-5.28,34.6-.08.53,0,.83a4.82,4.82,0,0,1-2,3.83,5,5,0,0,1-2.06.81l-.61.05h-1.69l-3.38,0-27,.16-27,.43-3.38,0-1.69,0-.7,0a5.68,5.68,0,0,1-2.47-.81,5.77,5.77,0,0,1-2.67-4.56l-.05-1,0-.22L27.45,112.09a7.17,7.17,0,0,1,1.91-4.73,6.75,6.75,0,0,1,5.13-2.1l53.27,1,26.63.55,3.33.07.84,0c.25,0,.64,0,.67,0,.23,0,.46,0,.67.09a5.54,5.54,0,0,1,2.37,1.06,5.38,5.38,0,0,1,2.06,4C122.5,123.27,120.58,134.51,118.92,145.78Z"/>
-      </svg>
-      Smart Plant
-    </div>
-  </header>
-
-  <section id="grow_cards">
-
-    <div class="grow_card">
+    <a class="grow_card" href="/grow">
       <div class="grow_card_left">
-        <img class="pixelart_plant_pic" src="../static/weedplant.png" alt="">
+        <img src="./assets/weedplant.png" alt="">
       </div>
       <div class="grow_card_right">
         <div class="box_header">
@@ -34,7 +13,7 @@
           <div class=card_content_point>
             <div class="green_dash"></div>
             <div class="pot_count">
-              <svg id="pot_icon" viewBox="0 0 163.04 148.33">
+              <svg viewBox="0 0 163.04 148.33">
                 <path d="M152.53,49.61c-6.31,30.31-12.52,60.17-18.79,90-1.16,5.49-5,8.63-10.65,8.64q-41.34.1-82.68,0c-5.42,0-9.42-2.86-10.49-7.84Q20.26,95.53,10.84,50.54a3.82,3.82,0,0,1,.07-.93ZM6.35,0C1.48,0,.05,1.39,0,6.16Q0,19.08,0,32c0,4.51,1.56,6.09,6.12,6.09q75.38,0,150.74,0c4.66,0,6.12-1.61,6.13-6.45q0-12.35,0-24.69C163,1.14,161.87,0,156,0H81.91Q44.13,0,6.35,0Z"/>
               </svg>
               6
@@ -60,11 +39,11 @@
           </div>  
         </div>
       </div>
-    </div>
+    </a>
 
-    <div class="grow_card">
+    <a class="grow_card" href="/grow">
       <div class="grow_card_left">
-        <img class="pixelart_plant_pic" src="../static\weedplant_baby.png" alt="">
+        <img src="./assets/weedplant_baby.png" alt="">
       </div>
       <div class="grow_card_right">
         <div class="box_header">
@@ -101,11 +80,11 @@
           </div>  
         </div>
       </div>
-    </div>
+    </a>
 
-    <div class="grow_card">
+    <a class="grow_card" href="/grow">
       <div class="grow_card_left">
-        <img class="pixelart_plant_pic" src="../static/weedplant.png" alt="">
+        <img src="./assets/weedplant.png" alt="">
       </div>
       <div class="grow_card_right">
         <div class="box_header">
@@ -142,47 +121,6 @@
           </div>  
         </div>
       </div>
-    </div>
+    </a>
 
 </section>
-  
-
-
-
-<!--  
-  <div id="grow1" class="container">
-    <form method="post" action="/">
-      Sunrise:
-      <input id="sunrise" type="time" name="sunrise" value={{sunrise_time}}>
-      <br>Sunset:
-      <input id="sunset" type="time" name="sunset" value={{sunset_time}}>
-      <br>White:
-      <input type="text" name="white" id="white" value={{value_white}}>
-      <br>Red:
-      <input type="text" name="red" id="red" value={{value_red}}>
-      <br>Blue:
-      <input type="text" name="blue" id="blue" value={{value_blue}}>
-      <br>
-      <input type="submit" name="submit_button" value="Abschicken">
-    </form>
-  </div> -->
-
-
-
-  <!-- <br>
-  <div id="grow_image_live">
-    <img src="{{ url_for('video_feed') }}"> -->
-<!--
-    <script>
-    var currentTime = performance.now();
-    //document.write("<img src="/static/grow_live.png"" + currentTime />);
-    </script>
-
-    <img src="/static/grow_live.png?currentTime" alt="Live image">
-    <script>
-    document.write(performance.now()+ "<br>");
-    </script>
-  -->
-  </div>
-</body>
-</html>

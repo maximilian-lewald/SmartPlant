@@ -1,0 +1,48 @@
+footer{
+    flex-shrink: 0;
+    
+    background-color: $color_white;
+    height: 64px;
+    width: 100%;
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+
+    .footer_button{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        height: 100%;
+
+        &:hover{
+            background-color: $color_grey_100;
+        }
+
+        &.active{
+            svg{
+                fill: $color_primary_500;
+            }
+        }
+
+        svg{
+            fill: $color_grey_500;
+            margin-right: 10px;
+            transform: translateY(-3px);
+        }
+    }
+    #footer_plants{
+        svg{
+            width: 28px;
+        }
+    }
+
+    #footer_settings{
+        svg{
+            width: 32px;
+        }
+    }
+}

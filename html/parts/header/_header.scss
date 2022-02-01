@@ -1,0 +1,20 @@
+header{
+    flex-shrink: 0;
+
+    background-color: $color_primary_500;
+    height: 64px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #header_logo{
+        color: $color_white;
+        font-size: 26px;
+
+        svg{
+            fill: $color_white;
+            height: 32px;
+        }
+    }
+}
