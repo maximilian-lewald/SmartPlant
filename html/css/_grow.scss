@@ -87,3 +87,79 @@
 
 }
 
+#livecam{
+    display: flex;
+    #image{
+        background: url(../assets/grow_live.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+        // background-color: turquoise;
+        border-radius: 20px;
+        max-width: 500px;
+        width: 100%;
+        height: 300px;
+        min-height: 100%;
+        margin: auto;
+        cursor: pointer;
+
+        &:hover{
+            box-shadow: inset 0 0 0 4px $color_primary_300;
+        }
+    }  
+}
+
+#sunrise_sunset{
+    display: flex;
+    justify-content: center;
+
+    .sunrise_sunset_element{
+
+        h3{
+            margin: 0 0 10px 10px;
+            color: $color_grey_700;
+            font-weight: 600;
+        }
+
+        .timepicker_with_icon{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            svg{
+                width: 30%;
+                margin-right: 5px;
+            }
+            .timepicker{
+                background-color: $color_white;
+                width: 100px;
+                border-radius: 10px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                color: $color_grey_700;
+                font-weight: 600;
+                cursor: pointer;
+
+                &:hover{
+                    box-shadow: inset 0 0 0 3px $color_primary_300;
+                }
+            }
+        }
+    }
+    #sunrise{
+        margin-right: 30px;
+
+        svg{
+            fill: $color_sun;
+            height: 42px;
+        }
+    }
+    #sunset{
+        // background-color: rgb(121, 174, 255);
+        svg{
+            fill: $color_moon;
+            height: 32px;
+        }
+    }
+}
