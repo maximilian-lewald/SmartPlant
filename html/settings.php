@@ -29,6 +29,36 @@
 
 
     <script src="./js/footer_functions.js"></script>
+    <script src="./js/settings_functions.js"></script>
+
+    <script>
+      switch (theme) {
+        case 'light' :
+          document.querySelector('#button_theme_light').checked = true;
+          break;
+        case 'dark' :
+          document.querySelector('#button_theme_dark').checked = true;
+          break;
+        default :
+          document.querySelector('#button_theme_systemsettings').checked = true;
+          break;
+      }
+
+      button_theme_light.addEventListener('change', () =>{
+          enableLightMode();
+          setLocalStorage('theme', 'light');
+      });
+      button_theme_dark.addEventListener('change', () =>{
+          enableDarkMode();
+          setLocalStorage('theme', 'dark');
+      });
+      button_theme_systemsettings.addEventListener('change', () => {
+          localStorage.removeItem('theme');
+          console.log("No theme in storage");
+          systemsettingsdark == true ? enableDarkMode() : enableLightMode();
+      });
+    </script>
+    
     <script>
       change_active_footer("settings");
     </script>

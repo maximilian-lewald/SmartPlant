@@ -5,7 +5,7 @@
     margin-bottom: 20px;
 
     .settings_card{
-        background-color: $color_white;
+        background-color: var(--color_white);
         padding: 0 20px;
         border-radius: 20px;
         width: 100%;
@@ -17,13 +17,13 @@
             margin: 15px 0;
 
             svg{
-                fill: $color_primary_500;
+                fill: var(--color_primary_500);
                 width: 22px;
                 transform: translateY(1px);
             }
 
             h2{
-                color: $color_primary_500;
+                color: var(--color_primary_500);
                 text-align: right;
                 font-size: 20px;
                 font-weight: 600;
@@ -32,7 +32,7 @@
         }
 
         hr{
-            border: 1px solid $color_grey_200;
+            border: 1px solid var(--color_grey_200);
             margin: 5px 0;
         }
 
@@ -41,10 +41,62 @@
 
             @media only screen and (min-width: $sm)  {
                 width: 50%;
-                border-right: 1px solid $color_grey_200;
+                border-right: 1px solid var(--color_grey_200);
             }
             @media only screen and (min-width: $lg)  {
                 width: 33%;
+            }
+
+            .radio_line{
+                input{
+                    display: none;
+                }
+
+                border: none;
+                background-color: var(--color_white);
+                color: var(--color_grey_600);
+                font-size: 16px;
+        
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;   
+                border-radius: 20px;  
+                padding: 10px 20px;   
+                margin: 0;
+                cursor: pointer;
+        
+                .circle{
+                    border-radius: 50%;
+                    border: 1px var(--color_grey_600) solid;
+                    width: 24px;
+                    height: 24px;
+                    background-color: var(--color_white);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+        
+                    svg{
+                        fill: var(--color_white);
+                        height: 40%;
+                    }
+                }
+        
+                &:hover{
+                    background-color: var(--color_grey_100);
+        
+                    .circle{
+                        background-color: var(--color_grey_100);
+        
+                        svg{
+                            fill: var(--color_grey_100);
+                        }
+                    }
+                }
+        
+                input:checked + .circle{
+                        border-color: var(--color_primary_500);
+                        background-color: var(--color_primary_500);
+                }
             }
         }
     }

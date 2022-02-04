@@ -15,7 +15,7 @@
     // }   
 
     .grow_card{
-        background-color: $color_white;
+        background-color: var(--color_white);
         height: 180px;
         display: flex;
         border-radius: 20px;
@@ -29,7 +29,7 @@
         text-decoration: none;
 
         &:hover{
-            box-shadow: inset 0 0 0 4px $color_primary_300;
+            box-shadow: inset 0 0 0 4px var(--color_primary_300);
         }
 
         .grow_card_left{
@@ -49,7 +49,7 @@
 
             .box_header{
                 h2{
-                    color: $color_primary_500;
+                    color: var(--color_primary_500);
                     text-align: right;
                     font-size: 20px;
                     font-weight: 600;
@@ -57,7 +57,7 @@
                 }
     
                 hr{
-                    border: 2px solid $color_primary_100;
+                    border: 2px solid var(--color_primary_100);
                     margin: 5px 0;
                 }
             }
@@ -70,7 +70,7 @@
                     height: 50px;
 
                     .green_dash{
-                        background-color: $color_primary_100;
+                        background-color: var(--color_primary_100);
                         height: 7px;
                         width: 22px;
                         border-radius: 5px;
@@ -80,10 +80,10 @@
                     .pot_count{
                         font-size: 22px;
                         font-weight: 600;
-                        color: $color_grey_600;
+                        color: var(--color_grey_600);
 
                         svg{
-                            fill: $color_grey_600;
+                            fill: var(--color_grey_600);
                             height: 14px;
                         }
                     }

@@ -1,7 +1,7 @@
 footer{
     flex-shrink: 0;
     
-    background-color: $color_white;
+    background-color: var(--color_white);
     height: 64px;
     width: 100%;
     display: flex;
@@ -19,17 +19,17 @@ footer{
         height: 100%;
 
         &:hover{
-            background-color: $color_grey_100;
+            background-color: var(--color_grey_100);
         }
 
         &.active{
             svg{
-                fill: $color_primary_500;
+                fill: var(--color_primary_500);
             }
         }
 
         svg{
-            fill: $color_grey_500;
+            fill: var(--color_grey_500);
             margin-right: 10px;
             transform: translateY(-3px);
         }

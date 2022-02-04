@@ -1,7 +1,7 @@
 header{
     flex-shrink: 0;
 
-    background-color: $color_primary_500;
+    background-color: var(--color_primary_500);
     height: 64px;
     width: 100%;
     display: flex;
@@ -9,11 +9,11 @@ header{
     justify-content: center;
 
     #header_logo{
-        color: $color_white;
+        color: var(--color_white);
         font-size: 26px;
 
         svg{
-            fill: $color_white;
+            fill: var(--color_white);
             height: 32px;
         }
     }

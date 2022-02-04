@@ -11,16 +11,16 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-color: $color_grey_200;
+    background-color: var(--color_grey_200);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
 
     button{
         border: none;
-        background-color: $color_white;
+        background-color: var(--color_white);
         width: 100%;
-        color: $color_grey_600;
+        color: var(--color_grey_600);
         font-size: 16px;
 
         display: flex;
@@ -33,36 +33,36 @@ body {
 
         .circle{
             border-radius: 50%;
-            border: 1px $color_grey_600 solid;
+            border: 1px var(--color_grey_600) solid;
             width: 24px;
             height: 24px;
-            background-color: $color_white;
+            background-color: var(--color_white);
             display: flex;
             align-items: center;
             justify-content: center;
 
             svg{
-                fill: $color_white;
+                fill: var(--color_white);
                 height: 40%;
             }
         }
 
         &:hover{
-            background-color: $color_grey_100;
+            background-color: var(--color_grey_100);
 
             .circle{
-                background-color: $color_grey_100;
+                background-color: var(--color_grey_100);
 
                 svg{
-                    fill: $color_grey_100;
+                    fill: var(--color_grey_100);
                 }
             }
         }
 
         &.active{
             .circle{
-                border-color: $color_primary_500;
-                background-color: $color_primary_500;
+                border-color: var(--color_primary_500);
+                background-color: var(--color_primary_500);
             }
         }
     }

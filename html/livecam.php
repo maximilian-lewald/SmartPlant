@@ -42,6 +42,7 @@
     <?php require("./parts/footer/_footer.php") ?>
 
     <script src="./js/footer_functions.js"></script>
+    <script src="./js/settings_functions.js"></script>
     <script>
       change_active_footer("index");
     </script>
