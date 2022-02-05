@@ -13,34 +13,37 @@
   --color_grey_500: #9B9B9B;
   --color_grey_600: #7a7a7a;
   --color_grey_700: #494949;
+  --color_grey_750: #363636;
   --color_grey_800: #202020;
   --color_grey_900: #181818;
   --color_black: #000;
-  --color_sun: #E8A218;
-  --color_moon: #19436D; }
+  --color_blue_300: #5692ce;
+  --color_blue_500: #19436D;
+  --color_yellow_300: #e2b762;
+  --color_yellow_500: #E8A218;
+  --color_background: var(--color_grey_200);
+  --color_tiles: var(--color_white);
+  --color_tiles_hover: var(--color_grey_100);
+  --color_tiles_lines: var(--color_grey_200);
+  --color_text: var(--color_grey_600);
+  --color_primary_text: var(--color_primary_500);
+  --color_primary_background: var(--color_primary_500);
+  --color_sun: var(--color_yellow_500);
+  --color_moon: var(--color_blue_500); }
   :root .darkmode {
-    --color_primary_100: #003835;
-    --color_primary_300: #005853;
-    --color_primary_500: #00887F;
-    --color_primary_700: #5FC1BA;
-    --color_primary_900: #B4DEDB;
-    --color_white: #000;
-    --color_grey_100: #181818;
-    --color_grey_200: #202020;
-    --color_grey_300: #d8d8d8;
-    --color_grey_400: #7a7a7a;
-    --color_grey_500: #9B9B9B;
-    --color_grey_600: #BCBCBC;
-    --color_grey_700: #d8d8d8;
-    --color_grey_800: #E9E9E9;
-    --color_grey_900: #F3F3F3;
-    --color_black: #fff;
-    --color_sun: #E8A218;
-    --color_moon: #19436D; }
+    --color_background: var(--color_grey_700);
+    --color_tiles: var(--color_grey_800);
+    --color_tiles_hover: var(--color_grey_750);
+    --color_tiles_lines: var(--color_grey_700);
+    --color_text: var(--color_grey_300);
+    --color_primary_text: var(--color_primary_300);
+    --color_primary_background: var(--color_primary_700);
+    --color_sun: var(--color_yellow_500);
+    --color_moon: var(--color_blue_300); }
 
 /* Screen Size Variables */
 .titlebar {
-  background-color: var(--color_white);
+  background-color: var(--color_tiles);
   width: 100%;
   height: 60px;
   display: -webkit-box;
@@ -74,30 +77,30 @@
               justify-content: center;
       cursor: pointer; }
       .titlebar .back_and_header .back_button svg {
-        fill: var(--color_primary_500);
+        fill: var(--color_primary_text);
         height: 22px; }
       .titlebar .back_and_header .back_button:hover svg {
         height: 25px; }
     .titlebar .back_and_header h1 {
-      color: var(--color_primary_500);
+      color: var(--color_primary_text);
       font-weight: 600;
       font-size: 24px;
       margin: 0; }
   .titlebar .pot_count {
     font-size: 22px;
     font-weight: 600;
-    color: var(--color_grey_700);
+    color: var(--color_text);
     margin-right: 20px; }
     .titlebar .pot_count svg {
       height: 16px;
-      fill: var(--color_grey_700); }
+      fill: var(--color_text); }
 
 .module_section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
   .module_section .module {
-    background-color: var(--color_white);
+    background-color: var(--color_tiles);
     height: 80px;
     width: 80px;
     border-radius: 20px;
@@ -117,7 +120,7 @@
               box-shadow: inset 0 0 0 4px var(--color_primary_300); }
   .module_section #module_livecam svg {
     height: 34px;
-    fill: var(--color_grey_700); }
+    fill: var(--color_text); }
   .module_section #module_lighting svg {
     height: 48px;
     fill: var(--color_sun); }
@@ -164,7 +167,7 @@
       width: 30%;
       margin-right: 5px; }
     #sunrise_sunset .sunrise_sunset_element .timepicker_with_icon .timepicker {
-      background-color: var(--color_white);
+      background-color: var(--color_tiles);
       width: 100px;
       border-radius: 10px;
       height: 50px;
@@ -178,7 +181,7 @@
           -ms-flex-pack: center;
               justify-content: center;
       font-size: 24px;
-      color: var(--color_grey_700);
+      color: var(--color_text);
       font-weight: 600;
       cursor: pointer; }
       #sunrise_sunset .sunrise_sunset_element .timepicker_with_icon .timepicker:hover {
@@ -196,7 +199,7 @@
 header {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  background-color: var(--color_primary_500);
+  background-color: var(--color_primary_background);
   height: 64px;
   width: 100%;
   display: -webkit-box;
@@ -218,7 +221,7 @@ header {
 footer {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  background-color: var(--color_white);
+  background-color: var(--color_tiles);
   height: 64px;
   width: 100%;
   display: -webkit-box;
@@ -247,7 +250,7 @@ footer {
     cursor: pointer;
     height: 100%; }
     footer .footer_button:hover {
-      background-color: var(--color_grey_100); }
+      background-color: var(--color_tiles_hover); }
     footer .footer_button.active svg {
       fill: var(--color_primary_500); }
     footer .footer_button svg {
@@ -271,7 +274,7 @@ footer {
           justify-content: center;
   margin-bottom: 64px; }
   #grow_cards .grow_card {
-    background-color: var(--color_white);
+    background-color: var(--color_tiles);
     height: 180px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -305,13 +308,13 @@ footer {
       width: 70%;
       padding: 10px; }
       #grow_cards .grow_card .grow_card_right .box_header h2 {
-        color: var(--color_primary_500);
+        color: var(--color_primary_text);
         text-align: right;
         font-size: 20px;
         font-weight: 600;
         margin: 0 10px; }
       #grow_cards .grow_card .grow_card_right .box_header hr {
-        border: 2px solid var(--color_primary_100);
+        border: 1px solid var(--color_primary_100);
         margin: 5px 0; }
       #grow_cards .grow_card .grow_card_right .box_content .card_content_point {
         display: -webkit-box;
@@ -331,12 +334,18 @@ footer {
         #grow_cards .grow_card .grow_card_right .box_content .card_content_point .pot_count {
           font-size: 22px;
           font-weight: 600;
-          color: var(--color_grey_600); }
+          color: var(--color_text); }
           #grow_cards .grow_card .grow_card_right .box_content .card_content_point .pot_count svg {
-            fill: var(--color_grey_600);
+            fill: var(--color_text);
             height: 14px; }
         #grow_cards .grow_card .grow_card_right .box_content .card_content_point #lighting_icon {
-          height: 24px; }
+          width: 58px; }
+          #grow_cards .grow_card .grow_card_right .box_content .card_content_point #lighting_icon .cls-1 {
+            fill: var(--color_text); }
+          #grow_cards .grow_card .grow_card_right .box_content .card_content_point #lighting_icon .cls-2 {
+            fill: var(--color_yellow_500); }
+          #grow_cards .grow_card .grow_card_right .box_content .card_content_point #lighting_icon .cls-3 {
+            fill: var(--color_moon); }
 
 #settings_cards {
   display: -webkit-box;
@@ -349,7 +358,7 @@ footer {
           justify-content: center;
   margin-bottom: 20px; }
   #settings_cards .settings_card {
-    background-color: var(--color_white);
+    background-color: var(--color_tiles);
     padding: 0 20px;
     border-radius: 20px;
     width: 100%; }
@@ -365,32 +374,32 @@ footer {
               justify-content: center;
       margin: 15px 0; }
       #settings_cards .settings_card .settingscard_header svg {
-        fill: var(--color_primary_500);
+        fill: var(--color_primary_text);
         width: 22px;
         -webkit-transform: translateY(1px);
                 transform: translateY(1px); }
       #settings_cards .settings_card .settingscard_header h2 {
-        color: var(--color_primary_500);
+        color: var(--color_primary_text);
         text-align: right;
         font-size: 20px;
         font-weight: 600;
         margin: 0 0 0 10px; }
     #settings_cards .settings_card hr {
-      border: 1px solid var(--color_grey_200);
+      border: 1px solid var(--color_tiles_lines);
       margin: 5px 0; }
     #settings_cards .settings_card .settingscard_content {
       margin-bottom: 20px; }
       @media only screen and (min-width: 667px) {
         #settings_cards .settings_card .settingscard_content {
           width: 50%;
-          border-right: 1px solid var(--color_grey_200); } }
+          border-right: 1px solid var(--color_tiles_lines); } }
       @media only screen and (min-width: 992px) {
         #settings_cards .settings_card .settingscard_content {
           width: 33%; } }
       #settings_cards .settings_card .settingscard_content .radio_line {
         border: none;
-        background-color: var(--color_white);
-        color: var(--color_grey_600);
+        background-color: var(--color_tiles);
+        color: var(--color_text);
         font-size: 16px;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -409,10 +418,10 @@ footer {
           display: none; }
         #settings_cards .settings_card .settingscard_content .radio_line .circle {
           border-radius: 50%;
-          border: 1px var(--color_grey_600) solid;
+          border: 1px var(--color_text) solid;
           width: 24px;
           height: 24px;
-          background-color: var(--color_white);
+          background-color: var(--color_tiles);
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -423,20 +432,20 @@ footer {
               -ms-flex-pack: center;
                   justify-content: center; }
           #settings_cards .settings_card .settingscard_content .radio_line .circle svg {
-            fill: var(--color_white);
+            fill: var(--color_tiles);
             height: 40%; }
         #settings_cards .settings_card .settingscard_content .radio_line:hover {
-          background-color: var(--color_grey_100); }
+          background-color: var(--color_tiles_hover); }
           #settings_cards .settings_card .settingscard_content .radio_line:hover .circle {
-            background-color: var(--color_grey_100); }
+            background-color: var(--color_tiles_hover); }
             #settings_cards .settings_card .settingscard_content .radio_line:hover .circle svg {
-              fill: var(--color_grey_100); }
+              fill: var(--color_tiles_hover); }
         #settings_cards .settings_card .settingscard_content .radio_line input:checked + .circle {
           border-color: var(--color_primary_500);
           background-color: var(--color_primary_500); }
 
 #impressum_card {
-  background-color: var(--color_white);
+  background-color: var(--color_tiles);
   padding: 30px 10px;
   border-radius: 20px;
   display: -webkit-box;
@@ -453,10 +462,10 @@ footer {
       -ms-flex-align: center;
           align-items: center; }
   #impressum_card #header_logo {
-    color: var(--color_primary_500);
+    color: var(--color_primary_text);
     font-size: 30px; }
     #impressum_card #header_logo svg {
-      fill: var(--color_primary_500);
+      fill: var(--color_primary_text);
       height: 36px; }
   #impressum_card #impressum_card_links {
     margin: 20px 0; }
@@ -465,11 +474,11 @@ footer {
       padding: 2px 10px;
       margin: 2px;
       text-decoration: none;
-      color: var(--color_primary_500); }
+      color: var(--color_primary_text); }
       #impressum_card #impressum_card_links a:hover {
         text-decoration: underline; }
   #impressum_card p {
-    color: var(--color_grey_500);
+    color: var(--color_text);
     line-height: 18px;
     text-align: center;
     margin: 0;
@@ -479,7 +488,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: var(--color_grey_200);
+  background-color: var(--color_background);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;

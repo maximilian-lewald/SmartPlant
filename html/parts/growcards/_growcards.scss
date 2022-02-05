@@ -15,7 +15,7 @@
     // }   
 
     .grow_card{
-        background-color: var(--color_white);
+        background-color: var(--color_tiles);
         height: 180px;
         display: flex;
         border-radius: 20px;
@@ -49,7 +49,7 @@
 
             .box_header{
                 h2{
-                    color: var(--color_primary_500);
+                    color: var(--color_primary_text);
                     text-align: right;
                     font-size: 20px;
                     font-weight: 600;
@@ -57,7 +57,7 @@
                 }
     
                 hr{
-                    border: 2px solid var(--color_primary_100);
+                    border: 1px solid var(--color_primary_100);
                     margin: 5px 0;
                 }
             }
@@ -80,16 +80,26 @@
                     .pot_count{
                         font-size: 22px;
                         font-weight: 600;
-                        color: var(--color_grey_600);
+                        color: var(--color_text);
 
                         svg{
-                            fill: var(--color_grey_600);
+                            fill: var(--color_text);
                             height: 14px;
                         }
                     }
 
                     #lighting_icon{
-                        height: 24px;
+                        width: 58px;
+
+                        .cls-1 {
+                            fill: var(--color_text);
+                        }
+                        .cls-2 {
+                            fill: var(--color_yellow_500);
+                        }
+                        .cls-3 {
+                            fill: var(--color_moon);
+                        }                        
                     }
                 }
             }            

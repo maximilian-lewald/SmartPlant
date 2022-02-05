@@ -1,5 +1,5 @@
 .titlebar{
-    background-color: var(--color_white);
+    background-color: var(--color_tiles);
     width: 100%;
     height: 60px;
     display: flex;
@@ -20,7 +20,7 @@
             cursor: pointer;
     
             svg{
-                fill: var(--color_primary_500);
+                fill: var(--color_primary_text);
                 height: 22px;
             }
     
@@ -33,7 +33,7 @@
         }
     
         h1{
-            color: var(--color_primary_500);
+            color: var(--color_primary_text);
             font-weight: 600;
             font-size: 24px;
             margin: 0;    
@@ -44,11 +44,11 @@
     .pot_count{
         svg{
             height: 16px;
-            fill: var(--color_grey_700);
+            fill: var(--color_text);
         }
         font-size: 22px;
         font-weight: 600;
-        color: var(--color_grey_700);
+        color: var(--color_text);
         margin-right: 20px;
     }
 }
@@ -57,7 +57,7 @@
     display: flex;
 
     .module{
-        background-color: var(--color_white);
+        background-color: var(--color_tiles);
         height: 80px;
         width: 80px;
         border-radius: 20px;
@@ -75,7 +75,7 @@
     #module_livecam{
         svg{
             height: 34px;
-            fill: var(--color_grey_700)
+            fill: var(--color_text)
         }
     }
     #module_lighting{
@@ -93,7 +93,6 @@
         background: url(../assets/grow_live.png) no-repeat;
         background-size: cover;
         background-position: center;
-        // background-color: turquoise;
         border-radius: 20px;
         max-width: 500px;
         width: 100%;
@@ -129,7 +128,7 @@
                 margin-right: 5px;
             }
             .timepicker{
-                background-color: var(--color_white);
+                background-color: var(--color_tiles);
                 width: 100px;
                 border-radius: 10px;
                 height: 50px;
@@ -137,7 +136,7 @@
                 align-items: center;
                 justify-content: center;
                 font-size: 24px;
-                color: var(--color_grey_700);
+                color: var(--color_text);
                 font-weight: 600;
                 cursor: pointer;
 

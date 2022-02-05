@@ -1,7 +1,7 @@
 footer{
     flex-shrink: 0;
     
-    background-color: var(--color_white);
+    background-color: var(--color_tiles);
     height: 64px;
     width: 100%;
     display: flex;
@@ -19,7 +19,7 @@ footer{
         height: 100%;
 
         &:hover{
-            background-color: var(--color_grey_100);
+            background-color: var(--color_tiles_hover);
         }
 
         &.active{
