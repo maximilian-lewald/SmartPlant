@@ -8,6 +8,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href='./css/main.css' name="viewport" content="width=[widest centered div];"/>
+    <link rel="stylesheet" href="./lib/glightbox/dist/css/glightbox.min.css">
 
     <!-- HTML Site Information -->
     <link rel="icon" type="image/ico" href="./assets/smartplant_icon_round.png">
@@ -15,7 +16,9 @@
     <title>Live Cam</title>
 
     <!-- JavaScript -->
-    <script src="./lib/jquery-3.4.1.min.js"></script>
+    <script src="./lib/jquery-3.4.1.min.js"></script> 
+    <script src="./lib/glightbox/dist/js/glightbox.min.js"></script>   
+      
   </head>
 
   <body>
@@ -35,11 +38,20 @@
 
     <div class="content">  
       <div id="livecam" >
-        <div id="image"></div>
+        <a href="../assets/grow_live.png" class="glightbox" id="image"></a>
       </div>
     </div>
 
+    <!-- Simple image -->
+    <!-- <a href="../assets/grow_live.png" class="glightbox1">
+      <img src="../assets/grow_live.png" alt="image" />
+    </a> -->
+
     <?php require("./parts/footer/_footer.php") ?>
+
+    <!-- <script type="text/javascript">
+      const lightbox = GLightbox({ ...options });
+    </script> -->
 
     <script src="./js/footer_functions.js"></script>
     <script src="./js/settings_functions.js"></script>
@@ -47,5 +59,22 @@
       change_active_footer("index");
     </script>
 
+    <script type="text/javascript">
+      const lightbox = GLightbox({
+        selector:  '.glightbox',
+        width: '100px',
+
+        onOpen: () => {
+          console.log('Lightbox opened')
+        },
+        onClose: () => {
+          console.log('Lightbox closed')
+        },
+        beforeSlideLoad: (slide, data) => {
+        // Need to execute a script in the slide?
+        // You can do that here...
+        }        
+      });
+    </script> 
   </body>
 </html>

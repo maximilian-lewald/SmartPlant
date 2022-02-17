@@ -314,7 +314,9 @@ footer {
         font-weight: 600;
         margin: 0 10px; }
       #grow_cards .grow_card .grow_card_right .box_header hr {
-        border: 1px solid var(--color_primary_100);
+        border: none;
+        height: 2px;
+        background-color: var(--color_primary_100);
         margin: 5px 0; }
       #grow_cards .grow_card .grow_card_right .box_content .card_content_point {
         display: -webkit-box;
@@ -385,7 +387,9 @@ footer {
         font-weight: 600;
         margin: 0 0 0 10px; }
     #settings_cards .settings_card hr {
-      border: 1px solid var(--color_tiles_lines);
+      border: none;
+      height: 1px;
+      background-color: var(--color_tiles_lines);
       margin: 5px 0; }
     #settings_cards .settings_card .settingscard_content {
       margin-bottom: 20px; }
@@ -563,3 +567,16 @@ body {
       margin-right: 10px;
       -webkit-transform: translateY(-3px);
               transform: translateY(-3px); }
+  body .goverlay {
+    background-color: var(--color_grey_800) !important; }
+  body .gprev, body .gnext {
+    display: none; }
+  body .gslide-image {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important; }
+    body .gslide-image img {
+      border-radius: 20px;
+      margin: 10px; }
+
+.glightbox-open {
+  height: 100vh !important; }
