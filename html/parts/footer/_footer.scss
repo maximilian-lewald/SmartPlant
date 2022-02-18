@@ -11,6 +11,7 @@ footer{
     justify-content: center;
 
     .footer_button{
+        text-decoration: none;
         width: 50%;
         display: flex;
         align-items: center;
@@ -26,12 +27,26 @@ footer{
             svg{
                 fill: var(--color_primary_500);
             }
+            span{
+                color: var(--color_primary_500);
+            }
         }
 
         svg{
             fill: var(--color_grey_500);
             margin-right: 10px;
-            transform: translateY(-3px);
+            transform: translateY(-1px);
+        }
+
+        span{
+            display: none;            
+            color: var(--color_grey_500);
+            font-size: 20px;
+            font-weight: 600;
+            transform: translateY(-2px);
+            @media only screen and (min-width: $sm)  {
+                display: inline-block;
+            }   
         }
     }
     #footer_plants{

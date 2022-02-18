@@ -128,16 +128,18 @@
                 margin-right: 5px;
             }
             .timepicker{
+                border: none;
+                outline: none;
+                box-shadow: none;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 background-color: var(--color_tiles);
-                width: 100px;
+                width: 140px;
                 border-radius: 10px;
                 height: 50px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 font-size: 24px;
                 color: var(--color_text);
                 font-weight: 600;
+                text-align: center;
                 cursor: pointer;
 
                 &:hover{
@@ -155,7 +157,6 @@
         }
     }
     #sunset{
-        // background-color: rgb(121, 174, 255);
         svg{
             fill: var(--color_moon);
             height: 28px;

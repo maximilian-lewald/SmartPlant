@@ -46,8 +46,11 @@
                 border-right: 1px solid var(--color_tiles_lines);
             }
             @media only screen and (min-width: $lg)  {
-                width: 33%;
+                width: 33.3333%;
             }
+            // @media only screen and (min-width: $xxxl)  {
+            //     width: 25%;
+            // }
 
             .radio_line{
                 input{

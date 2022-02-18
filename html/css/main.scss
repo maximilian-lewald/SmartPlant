@@ -72,6 +72,13 @@ body {
         padding: 0 5%;
         margin-top: 20px;
         margin-bottom: 20px;
+
+        @media screen and (min-width: $lg)  {
+            padding: 0 8%;
+        }
+        @media screen and (min-width: $xxl)  {
+            padding: 0 12%;
+        }
     }
 
     #header_logo{
