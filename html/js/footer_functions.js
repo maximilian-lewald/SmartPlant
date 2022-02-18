@@ -2,3 +2,8 @@
   function change_active_footer (pathname){
     $(".nav-id-" + pathname).addClass("active");  
   }
+
+  // Funktion, die aufgerufen wird, um von den Settings wieder zum vorherigen Navigationsstand zu kommen.
+  function goBack() { 
+    window.location=document.referrer;
+  }
